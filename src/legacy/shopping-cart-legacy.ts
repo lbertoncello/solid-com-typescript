@@ -1,7 +1,7 @@
 type CartItem = { name: string; price: number };
 type OrderStatus = 'open' | 'closed';
 
-export class ShoppingCart {
+export class ShoppingCartLegacy {
 	private readonly _items: CartItem[] = [];
 	private _orderStatus: OrderStatus = 'open';
 
@@ -57,13 +57,10 @@ export class ShoppingCart {
 	}
 }
 
-const shoppingCart = new ShoppingCart();
+const shoppingCart = new ShoppingCartLegacy();
 shoppingCart.addItem({ name: 'Camiseta', price: 49.9312 });
 shoppingCart.addItem({ name: 'Caderno', price: 9.9661 });
 shoppingCart.addItem({ name: 'Lápis', price: 1.59 });
-
-// ERRO! O getter retorna um valor readonly
-// shoppingCart.items[0] = { name: 'Carro', price: 2.59 }
 
 console.log(shoppingCart.items);
 console.log(shoppingCart.total());
