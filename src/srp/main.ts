@@ -1,3 +1,7 @@
+/*
+ * Uma entidade (classe módulo etc.) deve ter apenas uma razão para mudanças.
+ * Em outras palavras, uma entidade deve atender a apenas um stakeholder (usuário da API, cliente, gerente etc.).
+ */
 import { Messaging } from './services/messasing';
 import { Order } from './entities/order';
 import { Persistency } from './services/persistency';
